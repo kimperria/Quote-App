@@ -1,0 +1,10 @@
+
+<div>
+    <h1>My Quote App</h1>
+    <p>Display my static quotes</p>
+    <ul>
+      <li *ngFor="let quote of quotes">
+        "{{quote.say}}" ~ {{quote.author}}
+      </li>
+    </ul>
+  </div>
