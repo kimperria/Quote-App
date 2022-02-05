@@ -5,6 +5,7 @@
     <ul>
       <li *ngFor="let quote of quotes">
         {{quote.name}}
+        <app-quote-likes [quote]="quote"></app-quote-likes>
       </li>
     </ul>
   </div>
