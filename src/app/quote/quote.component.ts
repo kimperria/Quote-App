@@ -9,9 +9,9 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {say:'In the begining there was terminal', author:'Harrison Gitau'},
-    {say:'It is super easy tp forget stuff if you do not write them down', author:'Steve Fenton'},
-    {say:'Just Do It', author:'Nike'}
+    {name:'Genesis', say:'In the begining there was terminal', author:'Harrison Gitau'},
+    {name:'Learning', say:'It is super easy tp forget stuff if you do not write them down', author:'Steve Fenton'},
+    {name:'Life', say:'Just Do It', author:'Nike'}
   ];
   
   constructor() { }
