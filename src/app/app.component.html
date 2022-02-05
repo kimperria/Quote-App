@@ -1,4 +1,9 @@
 <div>
   <h1>My Quote App</h1>
-  <p>Display my quote = {{quote}}</p>
+  <p>Display my static quotes</p>
+  <ul>
+    <li *ngFor="let quote of quotes">
+      {{quote}}
+    </li>
+  </ul>
 </div>
