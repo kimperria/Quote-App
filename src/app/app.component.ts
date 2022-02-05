@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quote } from './quote';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // quote = 'In the begining, there was terminal'
 
-  quotes:string[];
+  // quotes:string[];
+  quotes:Quote[] = [
+    {say:'In the begining there was terminal', author:'Harrison Gitau'},
+    {say:'It is super easy tp forget stuff if you do not write them down', author:'Steve Fenton'},
+    {say:'Just Do It', author:'Nike'}
+  ];
 
   constructor(){
-    this.quotes = ['In the begining there was terminal', 'It is super easy to forget stuff is you do not write them down', 'Just do it']
   }
 }
