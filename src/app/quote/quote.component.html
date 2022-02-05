@@ -3,9 +3,10 @@
     <h1>My Quote App</h1>
     <p>Display my static quotes</p>
     <ul>
-      <li *ngFor="let quote of quotes">
-        {{quote.name}}
-        <app-quote-likes [quote]="quote"></app-quote-likes>
-      </li>
+        <div *ngFor="let quote of quotes; let i = index">
+            <li>{{quote.name}}</li>
+            <button (click)="toggleQuoteDetails(i)">Toogle to show Quote</button>
+            <app-quote-likes [quote]="quote"></app-quote-likes>
+        </div>
     </ul>
   </div>
