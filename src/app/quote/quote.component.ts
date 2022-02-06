@@ -10,14 +10,16 @@ export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
     new Quote('Genesis', 'Kimperria', 'In the begining there was terminal', 'Harrison Gitau', new Date()),
-    new Quote('Learning', 'Kimperria','It is super easy tp forget stuff if you do not write them down', 'Steve Fenton', new Date()),
+    new Quote('Learning', 'Kimperria','It is super easy to forget stuff if you do not write them down', 'Steve Fenton', new Date()),
     new Quote('Life', 'Kimperria', 'Just Do It', 'Nike', new Date())
   ];
     //add client quote
     addNewQuote(qoute: any){
       let quoteLength = this.quotes.length;
-      qoute.name = quoteLength;
-      qoute.say = quoteLength;
+      qoute.title = quoteLength;
+      // quote.title = quote.Length;
+      // qoute.name = quoteLength;
+      // qoute.say = quoteLength;
       this.quotes.push(qoute)
     }
 
