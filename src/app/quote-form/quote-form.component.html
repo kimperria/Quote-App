@@ -3,7 +3,9 @@
     <form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
         <div class="form-group row">
             <div>
-                <label for="name">Enter your name</label>
+                <p class="text-center">What's your qoute about?
+                    e.g Inpiration, Motivation, Life etc</p>
+                    <label for="name">Quote Title</label>
             </div>
             
             <div>
@@ -34,7 +36,7 @@
             <div class="col-md-5 col-sm-6">
                 <input type="text" class="form-control" id="authorName" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
             </div>
-            display {{newQuote.author}}
+            <!-- display {{newQuote.author}} -->
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger col-md-6">
                 <h6>Author's name is required</h6>
             </div>
