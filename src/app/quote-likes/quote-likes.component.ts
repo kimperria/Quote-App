@@ -11,6 +11,11 @@ export class QuoteLikesComponent implements OnInit {
   @Input() quote: Quote;
   @Output() deleteQuote=new EventEmitter<boolean>();
 
+  likes: number = 0;
+  upvoteThisQuote(){
+    this.likes++;
+  };
+
   deleteThisQuote(complete:boolean){
     this.deleteQuote.emit(complete);
   }
