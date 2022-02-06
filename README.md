@@ -2,6 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
+## About QuoteApp
+QuoteApp is an application that allows users to read quotes, post self qoutes other author's quotes citing their owners.
+
+## BDD
+* Objectives
+1. Users can view quotes published on the app.
+
+2. Users can publish quotes on the app.
+
+3. Users can upvote or downvote published quotes for ratings.
+
+## Developed with;
+* Angular Framework for component binding
+* Bootstrap library for styling and resposiveness.
+* Typescript for behaviour and functionality.
+## Author Infomation
+
+Author name: John Kimani
+
+Email: [Gmail](https://mail.google.com/mail/u/0/#inbox)
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
