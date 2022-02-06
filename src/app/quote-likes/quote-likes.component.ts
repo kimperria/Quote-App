@@ -16,6 +16,11 @@ export class QuoteLikesComponent implements OnInit {
     this.likes++;
   };
 
+  dislikes: number = 0;
+  downVoteThisQuote(){
+    this.dislikes--;
+  }
+
   deleteThisQuote(complete:boolean){
     this.deleteQuote.emit(complete);
   }
