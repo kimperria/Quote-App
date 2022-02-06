@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -9,6 +9,11 @@ import { Quote } from '../quote';
 export class QuoteLikesComponent implements OnInit {
 
   @Input() quote: Quote;
+  @Output() deleteQuote=new EventEmitter<boolean>();
+
+  deleteThisQuote(complete:boolean){
+    this.deleteQuote.emit(complete);
+  }
   constructor() { }
 
   ngOnInit(): void {
