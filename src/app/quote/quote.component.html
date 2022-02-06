@@ -5,7 +5,7 @@
     <ul>
         <div *ngFor="let quote of quotes; let i = index">
             <li>{{quote.name}}</li>
-            <button (click)="toggleQuoteDetails(i)">Toogle to show Quote</button>
+            <button (click)="toggleQuoteDetails(i)" class="btn btn-primary">Toogle to show Quote</button>
             <app-quote-likes *ngIf="quote.showDescription" [quote]="quote" (deleteQuote)='deleteQuote($event,i)'></app-quote-likes>
         </div>
     </ul>
