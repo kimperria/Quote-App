@@ -14,7 +14,10 @@ export class QuoteComponent implements OnInit {
     new Quote('Life', 'Just Do It', 'Nike')
   ];
 
-  
+  //toggle logic
+  toggleQuoteDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  } 
   
   constructor() { }
 
