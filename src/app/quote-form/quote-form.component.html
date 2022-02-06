@@ -5,9 +5,9 @@
             <div>
                 <p class="text-center">What's your qoute about?
                     e.g Inpiration, Motivation, Life etc</p>
+                    <hr>
                     <label for="name">Quote Title</label>
             </div>
-            
             <div>
                 <input type="text" class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel' required>
                 <!-- display {{newQuote.name}} -->
@@ -24,7 +24,7 @@
             <div>
                 <input type="text" class="form-control" id="userName" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
             </div>
-            Display {{newQuote.name}}
+            <!-- Display {{newQuote.name}} -->
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger mt-3">
                 <h6>Your name is required</h6>
             </div>
@@ -36,7 +36,7 @@
             <div>
                 <textarea class="form-control" id="userQuote" rows="4" [(ngModel)]="newQuote.say" name="say" #say="ngModel" required></textarea>
             </div>
-            Display {{newQuote.say}}
+            <!-- Display {{newQuote.say}} -->
             <div [hidden]="say.valid || say.pristine" class="alert alert-danger mt-3">
                 <h6>Quote is required</h6>
             </div>
@@ -56,14 +56,14 @@
         <div class="col-md-6 mt-3">
             <label for="createdDate">Date</label>
             <input type="date" id="posted" [(ngModel)]="newQuote.postedDate" name="postedDate" #postedDate="ngModel" required>
-                <p> This quote was posted on; {{newQuote.postedDate|date}} </p>
         </div>
+        <p class="mt-2"> This quote will be posted on; {{newQuote.postedDate|date}} </p>
 
         
         <div [hidden]="postedDate.valid || postedDate.valid" class="alert alert-danger">
             <h6>Date is required</h6>
         </div>
-        <button type="submit" class="btn btn-success mt-3">Post Quote</button>
+        <button type="submit" class="btn btn-success mt-1 mb-3">Post Quote</button>
     </form>
 
 </div>
