@@ -9,9 +9,9 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote('Genesis', 'In the begining there was terminal', 'Harrison Gitau'),
-    new Quote('Learning','It is super easy tp forget stuff if you do not write them down', 'Steve Fenton'),
-    new Quote('Life', 'Just Do It', 'Nike')
+    new Quote('Genesis', 'In the begining there was terminal', 'Harrison Gitau', new Date()),
+    new Quote('Learning','It is super easy tp forget stuff if you do not write them down', 'Steve Fenton', new Date()),
+    new Quote('Life', 'Just Do It', 'Nike', new Date())
   ];
 
   //toggle logic
