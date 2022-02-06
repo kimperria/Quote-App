@@ -9,13 +9,24 @@
             </div>
             
             <div>
-                <input type="text" class="form-control" id="userName" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+                <input type="text" class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel' required>
                 <!-- display {{newQuote.name}} -->
+            </div>
+            <div [hidden]="title.valid || title.pristine" class="alert alert-danger mt-3">
+                <h6>Quote title is required</h6>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div>
+                <label>Your Name</label>
+            </div>
+            
+            <div>
+                <input type="text" class="form-control" id="userName" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
             </div>
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger mt-3">
                 <h6>Your name is required</h6>
             </div>
-            
         </div>
         <div class="form-group row mt-2">
             <div>
