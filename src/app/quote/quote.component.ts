@@ -13,6 +13,13 @@ export class QuoteComponent implements OnInit {
     new Quote('Learning', 'Kimperria','It is super easy tp forget stuff if you do not write them down', 'Steve Fenton', new Date()),
     new Quote('Life', 'Kimperria', 'Just Do It', 'Nike', new Date())
   ];
+    //add client quote
+    addNewQuote(qoute: any){
+      let quoteLength = this.quotes.length;
+      qoute.name = quoteLength;
+      qoute.say = quoteLength;
+      this.quotes.push(qoute)
+    }
 
   //toggle logic
   toggleQuoteDetails(index){
@@ -27,14 +34,6 @@ export class QuoteComponent implements OnInit {
         this.quotes.splice(index, 1);
       }
     }
-  }
-
-  //add client quote
-  addNewQuote(qoute){
-    let quoteLength = this.quotes.length;
-    qoute.name = quoteLength;
-    qoute.say = quoteLength;
-    this.quotes.push(qoute)
   }
   
   constructor() { }
