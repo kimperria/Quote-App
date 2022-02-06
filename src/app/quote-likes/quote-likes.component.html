@@ -1,4 +1,13 @@
-<p>
-    "{{quote.say}}" ~ {{quote.author}}
-</p>
-<i class="fas fa-trash" (click)="deleteThisQuote(true)"></i>
+<div class="container container-fluid">
+    <div class="quoteDetails mt-4 pd-2">
+        <p class="text-center">
+            "{{quote.say}}" ~ {{quote.author}}
+        </p>
+    </div>
+    <div class="quoteIcons">
+        <i class="fas fa-trash" (click)="deleteThisQuote(true)"></i>
+    </div>
+
+</div>
+
+
