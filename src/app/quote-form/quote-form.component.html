@@ -7,8 +7,11 @@
             </div>
             
             <div>
-                <input type="text" class="form-control" id="userName" [(ngModel)]="newQuote.name" name="name" required>
-                display {{newQuote.name}}
+                <input type="text" class="form-control" id="userName" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+                <!-- display {{newQuote.name}} -->
+            </div>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger mt-3">
+                <h6>Your name is required</h6>
             </div>
             
         </div>
@@ -17,22 +20,36 @@
                 <label for="quote">Enter Quote</label>
             </div>
             <div>
-                <textarea class="form-control" name="" id="userQuote" rows="4" required></textarea>
+                <textarea class="form-control" id="userQuote" rows="4" [(ngModel)]="newQuote.say" name="say" #say="ngModel" required></textarea>
+            </div>
+            <!-- Display {{newQuote.say}} -->
+            <div [hidden]="say.valid || say.pristine" class="alert alert-danger mt-3">
+                <h6>Quote is required</h6>
             </div>
         </div>
         <div class="form-group row">
             <div>
                 <label for="name">Quote said by;</label>
             </div>
-            <div class="col-md-6 col-sm-6">
-                <input type="text" class="form-control" id="authorName" required>
+            <div class="col-md-5 col-sm-6">
+                <input type="text" class="form-control" id="authorName" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
             </div>
-            <div class="col-md-6 ps-5">
-                    <label for="createdDate">Date</label>
-                    <input type="date" id="postedDate" [(ngModel)]="newQuote.postedDate" name="postedDate" required>
+            display {{newQuote.author}}
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger col-md-6">
+                <h6>Author's name is required</h6>
             </div>
         </div>
-        <button type="submit" class="btn btn-success">Post Quote</button>
+        <div class="col-md-6 mt-3">
+            <label for="createdDate">Date</label>
+            <input type="date" id="postedDate" [(ngModel)]="newQuote.postedDate" name="postedDate" #date="ngModel" required>
+                <p> This quote was posted on; {{newQuote.postedDate|date}} </p>
+        </div>
+
+        
+        <div [hidden]="date.valid || date.valid" class="alert alert-danger">
+            <h6>Date is required</h6>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Post Quote</button>
     </form>
 
 </div>
