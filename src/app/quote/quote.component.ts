@@ -28,6 +28,14 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+
+  //add client quote
+  addNewQuote(qoute){
+    let quoteLength = this.quotes.length;
+    qoute.name = quoteLength;
+    qoute.say = quoteLength;
+    this.quotes.push(qoute)
+  }
   
   constructor() { }
 
