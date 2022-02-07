@@ -14,7 +14,7 @@ To clone this repository, open terminal the copy and run this code
 * code .
 ## Live Demo 
 
-[QuoteApp]()
+[QuoteApp](https://john-kimani.github.io/Quote-App/)
 
 
 ## BDD
