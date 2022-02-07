@@ -8,7 +8,7 @@
         <h5>This quote was posted by: <em>{{quote.name}}</em></h5>
         <p>This quote was posted on : {{quote.postedDate|date}}</p>
         <ul>
-            <i class="far fa-thumbs-up" (click)="upvoteThisQuote()">{{likes}}</i>
+            <i class="far fa-thumbs-up" (click)="upvoteThisQuote()" appHighlight>{{likes}}</i>
             <i class="far fa-thumbs-down ps-4" (click)="downVoteThisQuote()">{{dislikes}}</i>
             <i class="fas fa-trash ps-5" id="delete" (click)="deleteThisQuote(true)"></i>
         </ul>

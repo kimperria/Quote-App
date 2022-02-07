@@ -13,9 +13,9 @@ export class HighlightDirective {
     this.color('gold')
   }
 
-  @HostListener('dblclick') onDoubleClicks(){
-    this.color('white')
-  }
+  // @HostListener('dblclick') onDoubleClicks(){
+  //   this.color('white')
+  // }
 
   private color(action:string){
     this.elem.nativeElement.style.color=action;
