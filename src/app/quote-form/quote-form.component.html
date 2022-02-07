@@ -10,7 +10,7 @@
             </div>
             <div>
                 <input type="text" class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel' required>
-                <!-- display {{newQuote.name}} -->
+                <!-- display {{newQuote.title}} -->
             </div>
             <div [hidden]="title.valid || title.pristine" class="alert alert-danger mt-3">
                 <h6>Quote title is required</h6>
